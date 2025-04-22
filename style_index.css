@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgba(5, 47, 95);
+    margin: 0;
+}
+
+header {
+    background-color: rgba(114, 134, 160);
+    padding: 10px;
+    margin: 10px auto;              /* <-- centraliza */
+    width: 1300px;                  /* <-- igual ao <main> */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+header > h1 {
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+article {
+    background-color: white;
+}
+
+article > h2 {
+    font-size: 25px;
+}
+
+article > p {
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 18px;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    width: 1300px;
+    border-radius: 4px;
+}
