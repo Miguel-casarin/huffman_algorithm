@@ -107,9 +107,26 @@ Build Huffman tree
 ```php
 $nodes = $freq_items;
 ```
+Processes the characters
 ```php
+ while(count($nodes) > 1){
+            $first = array_shift($nodes);
+            $second = array_shift($nodes);
+    
+            list($key1, $c1) = $first;
+            list($key2, $c2) = $second;
+    
+            $node = new nodetree($key1, $key2);
+            $nodes[] = [$node, $c1 + $c2];
+    
+            usort($nodes, function($a, $b){
+                if ($a[1] == $b[1]) {
+                    return strcmp((string)$a[0], (string)$b[0]);
+                }
+                return $a[1] <=> $b[1];
+            });
+        }
 ```
-```php
-```
+
 
 
